@@ -1,15 +1,7 @@
-// ==UserScript==
-// @name         Facebook Marketplace Hider
-// @namespace    http://tampermonkey.net/
-// @version      1.0
-// @description  Adds a Hide button directly on each listing in the Facebook Marketplace search/browse grid, so you don't have to open each ad to hide it.
-// @author       You
-// @match        https://www.facebook.com/marketplace/*
-// @grant        none
-// ==/UserScript==
-
 (function () {
   "use strict";
+
+  if (location.hostname !== "www.facebook.com") return;
 
   const STORAGE_KEY = "fbMarketplaceHiddenIds";
 

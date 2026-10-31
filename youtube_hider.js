@@ -1,15 +1,7 @@
-// ==UserScript==
-// @name         YouTube Element Hider
-// @namespace    http://tampermonkey.net/
-// @version      1.1
-// @description  Hides specific sections of YouTube
-// @author       You
-// @match        *://*.youtube.com/*
-// @grant        none
-// ==/UserScript==
-
 (function () {
   "use strict";
+
+  if (!location.hostname.endsWith("youtube.com")) return;
 
   // --- METHOD 1: Hide by CSS Selector ---
   // Best for elements with unique IDs or tags (like the sidebar)
